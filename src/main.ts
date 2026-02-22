@@ -3,6 +3,8 @@ import "./style.css";
 type Perfume = {
   id: string;
   name: string;
+  brand: string;
+  category: string;
   notes: string[];
   colors: string[];
 };
@@ -24,6 +26,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "khamrah-lattafa",
     name: "Khamrah (Lattafa)",
+    brand: "Lattafa",
+    category: "Gourmand",
     notes: [
       "Cinnamon",
       "Nutmeg",
@@ -44,6 +48,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "liquid-brun",
     name: "Liquid Brun (French Avenue)",
+    brand: "French Avenue",
+    category: "Gourmand",
     notes: [
       "Cinnamon",
       "Orange Blossom",
@@ -61,6 +67,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "swy-intensely",
     name: "Stronger With You Intensely (Giorgio Armani)",
+    brand: "Giorgio Armani",
+    category: "Oriental",
     notes: [
       "Pink Pepper",
       "Juniper",
@@ -79,6 +87,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "khamrah-qahwa",
     name: "Khamrah Qahwa (Lattafa)",
+    brand: "Lattafa",
+    category: "Gourmand",
     notes: [
       "Cinnamon",
       "Cardamom",
@@ -97,12 +107,16 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "le-male-elixir",
     name: "Le Male Elixir (Jean Paul Gaultier)",
+    brand: "Jean Paul Gaultier",
+    category: "Oriental",
     notes: ["Lavender", "Mint", "Vanilla", "Benzoin", "Honey", "Tonka Bean", "Tobacco"],
     colors: [],
   },
   {
     id: "angels-share",
     name: "Angels' Share (By Kilian)",
+    brand: "Kilian",
+    category: "Gourmand",
     notes: [
       "Cognac",
       "Cinnamon",
@@ -119,12 +133,16 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "le-male-le-parfum",
     name: "Le Male Le Parfum (Jean Paul Gaultier)",
+    brand: "Jean Paul Gaultier",
+    category: "Oriental",
     notes: ["Cardamom", "Lavender", "Iris", "Vanilla", "Oriental Notes", "Woodsy Notes"],
     colors: [],
   },
   {
     id: "imagination-lv",
     name: "Imagination (Louis Vuitton)",
+    brand: "Louis Vuitton",
+    category: "Fresh",
     notes: [
       "Citron",
       "Calabrian Bergamot",
@@ -142,6 +160,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "y-edp",
     name: "Y Eau de Parfum (Yves Saint Laurent)",
+    brand: "Yves Saint Laurent",
+    category: "Aromatic",
     notes: [
       "Apple",
       "Ginger",
@@ -160,6 +180,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "naxos",
     name: "XJ 1861 Naxos (Xerjoff)",
+    brand: "Xerjoff",
+    category: "Oriental",
     notes: [
       "Lavender",
       "Bergamot",
@@ -177,6 +199,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "by-the-fireplace",
     name: "By the Fireplace (Maison Margiela)",
+    brand: "Maison Margiela",
+    category: "Woody",
     notes: [
       "Cloves",
       "Pink Pepper",
@@ -193,6 +217,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "club-de-nuit-intense",
     name: "Club de Nuit Intense Man (Armaf)",
+    brand: "Armaf",
+    category: "Woody",
     notes: [
       "Lemon",
       "Pineapple",
@@ -212,12 +238,16 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "bianco-latte",
     name: "Bianco Latte (Giardini Di Toscana)",
+    brand: "Giardini Di Toscana",
+    category: "Gourmand",
     notes: ["Caramel", "Coumarin", "Honey", "Vanilla", "White Musk"],
     colors: [],
   },
   {
     id: "jazz-club",
     name: "Jazz Club (Maison Margiela)",
+    brand: "Maison Margiela",
+    category: "Woody",
     notes: [
       "Pink Pepper",
       "Neroli",
@@ -234,6 +264,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "althair",
     name: "Althaïr (Parfums de Marly)",
+    brand: "Parfums de Marly",
+    category: "Gourmand",
     notes: [
       "Cinnamon",
       "Cardamom",
@@ -253,6 +285,8 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "tobacco-vanille",
     name: "Tobacco Vanille (Tom Ford)",
+    brand: "Tom Ford",
+    category: "Oriental",
     notes: [
       "Tobacco Leaf",
       "Spicy Notes",
@@ -268,12 +302,16 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "eclaire",
     name: "Eclaire (Lattafa)",
+    brand: "Lattafa",
+    category: "Gourmand",
     notes: ["Caramel", "Milk", "Sugar", "Honey", "White Flowers", "Vanilla", "Praline", "Musk"],
     colors: [],
   },
   {
     id: "le-beau-le-parfum",
     name: "Le Beau Le Parfum (Jean Paul Gaultier)",
+    brand: "Jean Paul Gaultier",
+    category: "Fresh",
     notes: [
       "Pineapple",
       "Iris",
@@ -291,12 +329,16 @@ const defaultPerfumes: Perfume[] = [
   {
     id: "born-in-roma-intense",
     name: "Valentino Uomo Born In Roma Intense",
+    brand: "Valentino",
+    category: "Aromatic",
     notes: ["Vanilla", "Lavender", "Vetiver"],
     colors: [],
   },
   {
     id: "goddess-burberry",
     name: "Goddess (Burberry)",
+    brand: "Burberry",
+    category: "Gourmand",
     notes: ["Vanilla", "Lavender", "Cacao", "Ginger", "Vanilla Caviar", "Vanilla Absolute"],
     colors: [],
   },
@@ -396,10 +438,16 @@ const notePreview = document.getElementById("notePreview") as HTMLDivElement;
 const saveTodayBtn = document.getElementById("saveToday") as HTMLButtonElement;
 const clearTodayBtn = document.getElementById("clearToday") as HTMLButtonElement;
 const newNameInput = document.getElementById("newName") as HTMLInputElement;
+const newBrandInput = document.getElementById("newBrand") as HTMLInputElement;
+const newCategoryInput = document.getElementById("newCategory") as HTMLInputElement;
 const newNotesInput = document.getElementById("newNotes") as HTMLInputElement;
 const newColorsInput = document.getElementById("newColors") as HTMLInputElement;
 const addPerfumeBtn = document.getElementById("addPerfume") as HTMLButtonElement;
 const searchInput = document.getElementById("search") as HTMLInputElement;
+const suggestionList = document.getElementById("perfumeSuggestions") as HTMLDataListElement;
+const brandFilter = document.getElementById("brandFilter") as HTMLSelectElement;
+const categoryFilter = document.getElementById("categoryFilter") as HTMLSelectElement;
+const clearFiltersBtn = document.getElementById("clearFilters") as HTMLButtonElement;
 const exportBtn = document.getElementById("exportData") as HTMLButtonElement;
 const importBtn = document.getElementById("importData") as HTMLButtonElement;
 const dataBox = document.getElementById("dataBox") as HTMLTextAreaElement;
@@ -529,16 +577,49 @@ function buildColors(notes: string[]) {
   return colors;
 }
 
+function deriveCategoryFromNotes(notes: string[]) {
+  const normalized = notes.map((note) => note.trim().toLowerCase());
+  const has = (fragment: string) =>
+    normalized.some((note) => note.includes(fragment));
+
+  if (has("vanilla") || has("caramel") || has("praline") || has("honey") || has("tonka")) {
+    return "Gourmand";
+  }
+  if (has("citrus") || has("bergamot") || has("lemon") || has("orange") || has("neroli")) {
+    return "Fresh";
+  }
+  if (has("lavender") || has("sage") || has("geranium") || has("aromatic")) {
+    return "Aromatic";
+  }
+  if (has("wood") || has("cedar") || has("sandalwood") || has("vetiver") || has("patchouli")) {
+    return "Woody";
+  }
+  if (has("amber") || has("benzoin") || has("myrrh") || has("resin") || has("incense")) {
+    return "Oriental";
+  }
+  return "Other";
+}
+
 function normalizePerfume(perfume: Perfume): Perfume {
   const colors = perfume.colors?.length ? perfume.colors : buildColors(perfume.notes);
-  return { ...perfume, colors };
+  const brand = perfume.brand?.trim() || "Unknown";
+  const category =
+    perfume.category?.trim() || deriveCategoryFromNotes(perfume.notes);
+  return { ...perfume, colors, brand, category };
 }
 
 function buildPerfumeOptions() {
   const query = searchInput.value.trim().toLowerCase();
   perfumeSelect.innerHTML = "";
   state.perfumes
-    .filter((p) => p.name.toLowerCase().includes(query))
+    .filter((p) => {
+      const matchesQuery = p.name.toLowerCase().includes(query);
+      const matchesBrand =
+        brandFilter.value === "all" || p.brand === brandFilter.value;
+      const matchesCategory =
+        categoryFilter.value === "all" || p.category === categoryFilter.value;
+      return matchesQuery && matchesBrand && matchesCategory;
+    })
     .forEach((perfume) => {
       const option = document.createElement("option");
       option.value = perfume.id;
@@ -546,6 +627,39 @@ function buildPerfumeOptions() {
       perfumeSelect.appendChild(option);
     });
   updateNotePreview();
+}
+
+function buildSuggestionList() {
+  suggestionList.innerHTML = "";
+  state.perfumes.forEach((perfume) => {
+    const option = document.createElement("option");
+    option.value = `${perfume.name} — ${perfume.brand}`;
+    suggestionList.appendChild(option);
+  });
+}
+
+function buildFilterOptions() {
+  const brands = Array.from(new Set(state.perfumes.map((p) => p.brand))).sort();
+  const categories = Array.from(new Set(state.perfumes.map((p) => p.category))).sort();
+
+  brandFilter.querySelectorAll("option:not([value=\"all\"])").forEach((el) => el.remove());
+  categoryFilter
+    .querySelectorAll("option:not([value=\"all\"])")
+    .forEach((el) => el.remove());
+
+  brands.forEach((brand) => {
+    const option = document.createElement("option");
+    option.value = brand;
+    option.textContent = brand;
+    brandFilter.appendChild(option);
+  });
+
+  categories.forEach((category) => {
+    const option = document.createElement("option");
+    option.value = category;
+    option.textContent = category;
+    categoryFilter.appendChild(option);
+  });
 }
 
 function updateNotePreview() {
@@ -564,6 +678,8 @@ function updateNotePreview() {
 function createPerfumeFromInput(): Perfume | null {
   const name = newNameInput.value.trim();
   if (!name) return null;
+  const brand = newBrandInput.value.trim() || "Unknown";
+  const category = newCategoryInput.value.trim();
   const notes = newNotesInput.value
     .split(",")
     .map((n) => n.trim())
@@ -578,6 +694,8 @@ function createPerfumeFromInput(): Perfume | null {
   return {
     id: `${name.toLowerCase().replace(/\s+/g, "-")}-${Date.now()}`,
     name,
+    brand,
+    category: category || deriveCategoryFromNotes(notes),
     notes,
     colors: colors.length ? colors : buildColors(notes),
   };
@@ -701,9 +819,11 @@ function importData() {
   try {
     const parsed = JSON.parse(dataBox.value) as StoredData;
     if (!parsed.perfumes || !parsed.records) return;
-    state.perfumes = parsed.perfumes;
+    state.perfumes = parsed.perfumes.map(normalizePerfume);
     state.records = parsed.records;
     saveData();
+    buildFilterOptions();
+    buildSuggestionList();
     buildPerfumeOptions();
     renderCalendar();
     updateStreak();
@@ -719,14 +839,31 @@ function bindEvents() {
   addPerfumeBtn.addEventListener("click", () => {
     const perfume = createPerfumeFromInput();
     if (!perfume) return;
-    state.perfumes.push(perfume);
+    state.perfumes.push(normalizePerfume(perfume));
     newNameInput.value = "";
+    newBrandInput.value = "";
+    newCategoryInput.value = "";
     newNotesInput.value = "";
     newColorsInput.value = "";
     saveData();
+    buildFilterOptions();
+    buildSuggestionList();
     buildPerfumeOptions();
   });
-  searchInput.addEventListener("input", buildPerfumeOptions);
+  searchInput.addEventListener("input", () => {
+    const raw = searchInput.value.trim();
+    const nameOnly = raw.split(" — ")[0];
+    searchInput.value = nameOnly;
+    buildPerfumeOptions();
+  });
+  brandFilter.addEventListener("change", buildPerfumeOptions);
+  categoryFilter.addEventListener("change", buildPerfumeOptions);
+  clearFiltersBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    brandFilter.value = "all";
+    categoryFilter.value = "all";
+    buildPerfumeOptions();
+  });
   exportBtn.addEventListener("click", exportData);
   importBtn.addEventListener("click", importData);
   prevMonthBtn.addEventListener("click", () => {
@@ -749,6 +886,8 @@ function bindEvents() {
 
 function init() {
   loadData();
+  buildSuggestionList();
+  buildFilterOptions();
   buildPerfumeOptions();
   renderCalendar();
   updateStreak();
