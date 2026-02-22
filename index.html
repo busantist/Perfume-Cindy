@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perfume Cindy - 향수 캘린더</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Perfume Calendar</p>
+        <h1>오늘 뿌린 향수로 캘린더 색칠하기</h1>
+        <p class="sub">Fragrantica 스타일 노트 컬러를 참고해, 그날의 향기를 캘린더에 기록하세요.</p>
+        <div class="hero-meta">
+          <div class="pill" id="todayLabel">오늘: -</div>
+          <div class="pill" id="streakLabel">연속 기록: 0일</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <div class="control-card">
+          <label for="perfumeSelect">향수 선택</label>
+          <select id="perfumeSelect"></select>
+          <div class="note-preview" id="notePreview"></div>
+          <div class="button-row">
+            <button id="saveToday">오늘 기록</button>
+            <button class="ghost" id="clearToday">오늘 지우기</button>
+          </div>
+        </div>
+
+        <div class="control-card">
+          <label>향수 추가</label>
+          <input id="newName" type="text" placeholder="향수 이름" />
+          <input id="newNotes" type="text" placeholder="노트 (예: Rose, Vanilla, Musk)" />
+          <input id="newColors" type="text" placeholder="색상 (예: #f4a, #f6d365, #c7f9cc)" />
+          <button id="addPerfume">추가</button>
+          <p class="hint">노트 수와 색상 수를 맞추면 그라디언트로 표시됩니다.</p>
+        </div>
+
+        <div class="control-card">
+          <label>필터</label>
+          <input id="search" type="search" placeholder="향수 이름 검색" />
+          <div class="button-row">
+            <button class="ghost" id="exportData">데이터 내보내기</button>
+            <button class="ghost" id="importData">데이터 가져오기</button>
+          </div>
+          <textarea id="dataBox" rows="6" placeholder="JSON 데이터"></textarea>
+        </div>
+      </section>
+
+      <section class="calendar">
+        <div class="calendar-header">
+          <button id="prevMonth">이전</button>
+          <h2 id="monthLabel"></h2>
+          <button id="nextMonth">다음</button>
+        </div>
+        <div class="weekdays">
+          <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+        </div>
+        <div class="grid" id="calendarGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>로컬 저장소에 기록됩니다. 다른 기기와 동기화하려면 내보내기/가져오기를 사용하세요.</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
